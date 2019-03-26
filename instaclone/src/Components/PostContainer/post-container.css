@@ -32,8 +32,8 @@
 
 .font-container{
     margin-top: 10px;
-    display: flex;
-    width: 15%;
-    justify-content: space-between;
+    display: flex !important;
+    width: 15% !important;
+    justify-content: space-between !important;
 }
 

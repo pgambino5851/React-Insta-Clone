@@ -5,7 +5,7 @@ import {
     Navbar,
     // NavbarToggler,
     NavbarBrand,
-    // Nav,
+    Nav,
     // NavItem,
     // NavLink,
     // UncontrolledDropdown,
@@ -27,6 +27,11 @@ const SearchBar = props =>{
                 <i class="fab fa-instagram fa-2x"></i>
                 <NavbarBrand href="/"> Instagram</NavbarBrand>
                 <Input type ="search" name ="search" placeholder="Search" />
+                <Nav className="ml-auto" navbar>
+                    <i class="far fa-compass fa-2x"></i>
+                    <i class="far fa-heart fa-2x"></i>
+                    <i class="far fa-user fa-2x"></i>
+                </Nav>
             </Navbar>
         </div>
     )
