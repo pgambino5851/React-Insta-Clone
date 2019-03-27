@@ -5,7 +5,9 @@ import '../PostContainer/post-container.css';
 import CommentSection from '../CommentSection/CommentSection'
 
 const PostContainer = props => {
-   
+
+    console.log(props);
+
     // props.cards.forEach(card => {
     //     console.log(card);
     // })
@@ -18,6 +20,9 @@ const PostContainer = props => {
     return (
        <div className="post-container">
            {props.cards.map(card => {
+            //    console.log(card.id);
+            //    console.log(card.likes);
+            //    console.log(card.id);
                return(
                 <Card key={Date.now() * Math.random()} >
                     <div className="thumbnail">
@@ -26,11 +31,13 @@ const PostContainer = props => {
                     </div>
                     <CardImg src={card.imageUrl} />
                     <div className="font-container">
-                        <i class="far fa-heart fa-2x"></i>
-                        <i class="far fa-comment fa-2x"></i>
+                        <i 
+                        className="far fa-heart fa-2x" 
+                        onClick={() => {props.updateLikes(card.id)}}></i>
+                        <i className="far fa-comment fa-2x"></i>
                     </div>
                     <CardSubtitle >{card.likes} likes</CardSubtitle>
-                    <CommentSection comments={card.comments}/>
+                    <CommentSection comments={card.comments} id={card.id}/>
                </Card>
             )
            })}   

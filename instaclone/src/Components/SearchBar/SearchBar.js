@@ -6,6 +6,7 @@ import {
     // NavbarToggler,
     NavbarBrand,
     Nav,
+    Button,
     // NavItem,
     // NavLink,
     // UncontrolledDropdown,
@@ -13,7 +14,7 @@ import {
     // DropdownMenu,
     // DropdownItem,
     // Button, 
-    // Form, 
+    Form, 
     // FormGroup,
     // Label, 
     Input, 
@@ -21,16 +22,25 @@ import {
 
 
 const SearchBar = props =>{
+    console.log("SearchBar Props:", props)
     return (
         <div className="search">
             <Navbar color ="light" light expand="md">
-                <i class="fab fa-instagram fa-2x"></i>
+                <i className="fab fa-instagram fa-2x"></i>
                 <NavbarBrand href="/"> Instagram</NavbarBrand>
-                <Input type ="search" name ="search" placeholder="Search" />
+                <form onSubmit={props.filterPosts}>
+                <Input 
+                type ="search" 
+                name ="search" 
+                placeholder="Search" 
+                value={props.search}
+                onChange={props.updateSearch}
+                />
+                </form>
                 <Nav className="ml-auto" navbar>
-                    <i class="far fa-compass fa-2x"></i>
-                    <i class="far fa-heart fa-2x"></i>
-                    <i class="far fa-user fa-2x"></i>
+                    <i className="far fa-compass fa-2x"></i>
+                    <i className="far fa-heart fa-2x"></i>
+                    <i className="far fa-user fa-2x"></i>
                 </Nav>
             </Navbar>
         </div>
