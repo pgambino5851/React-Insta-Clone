@@ -1,12 +1,13 @@
-.search {
-    background: red;
-    margin-bottom: 30px;
-}
-
 .fa-instagram {
-    width: 5%;
+    width: 33%;
     border-right: 1px solid black;
     margin-right: 20px;
+}
+
+
+/* .search {
+    background: red;
+    margin-bottom: 30px;
 }
 
 .navbar-nav{
@@ -18,4 +19,4 @@
 .form-control{
     width: 10%;
     margin: 0 33%;
-}
+} */

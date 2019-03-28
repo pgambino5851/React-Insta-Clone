@@ -14,21 +14,45 @@ import {
     // DropdownMenu,
     // DropdownItem,
     // Button, 
-    // Form, 
+    Form, 
     // FormGroup,
     // Label, 
     Input, 
     /* FormText*/} from 'reactstrap';
+import styled, {css} from 'styled-components'
 
+const Header = styled(Navbar)`
+display: flex;
+justify-content: space-between !important;
+`
+
+const LogoContainer = styled.div`
+width: 10%;
+display: flex;
+justify-content: space-between;
+`
+
+const SearchContainer = styled.div`
+width: 30%;
+`
+
+const NavContainer = styled(Nav)`
+display: flex;
+width: 10%;
+justify-content: space-between;
+`
 
 const SearchBar = props =>{
     console.log("SearchBar Props:", props)
     return (
         <div className="search">
-            <Navbar color ="light" light expand="md">
+            <Header color ="light" light expand="md">
+                <LogoContainer>
                 <i className="fab fa-instagram fa-2x"></i>
                 <NavbarBrand href="/"> Instagram</NavbarBrand>
-                <form onSubmit={props.filterPosts}>
+                </LogoContainer>
+                <SearchContainer>
+                <Form onSubmit={props.filterPosts}>
                 <Input 
                 type ="search" 
                 name ="search" 
@@ -36,13 +60,14 @@ const SearchBar = props =>{
                 value={props.search}
                 onChange={props.updateSearch}
                 />
-                </form>
-                <Nav className="ml-auto" navbar>
+                </Form>
+                </SearchContainer>
+                <NavContainer /*className="ml-auto"*/ navbar>
                     <i className="far fa-compass fa-2x"></i>
                     <i className="far fa-heart fa-2x"></i>
                     <i className="far fa-user fa-2x"></i>
-                </Nav>
-            </Navbar>
+                </NavContainer>
+            </Header>
         </div>
     )
 }

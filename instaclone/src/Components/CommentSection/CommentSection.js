@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 import '../CommentSection/comment-section.css';
 import { CardText, Input, Button} from 'reactstrap';
+import styled, {css} from 'styled-components'
 
 
+const CardTextContainer = styled(CardText)`
+
+`
+
+const CommentText = styled.span`
+    font-weight: bold;
+`
+const CommentInput = styled(Input)`
+    margin: 0 auto;
+    height: 40px !important;
+`
+const SubmitButton = styled(Button)`
+color: lightblue;
+margin-top: 10px;
+`
 
 class CommentSection extends Component {
     constructor(props) {
@@ -51,13 +67,13 @@ class CommentSection extends Component {
             <div>
                 {this.state.comments.map(comment => {
                  return (
-                    <CardText key={comment.id}>
-                        <span>{comment.username} {comment.text} </span>
-                    </CardText>
+                    <CardTextContainer key={comment.id}>
+                        <CommentText>{comment.username} {comment.text} </CommentText>
+                    </CardTextContainer>
                 )
              })}
-                 <Input id={this.state.id} value={this.state.newComment} className="comment-input" type="textarea" name="newComment" placeholder="Add a comment..." onChange={this.updateComment} />
-                 <Button onClick={this.submitComment}>Submit</Button>
+                 <CommentInput id={this.state.id} value={this.state.newComment} className="comment-input" type="textarea" name="newComment" placeholder="Add a comment..." onChange={this.updateComment} />
+                 <SubmitButton color="primary" onClick={this.submitComment}>Submit</SubmitButton>
             </div>
         )}
 }

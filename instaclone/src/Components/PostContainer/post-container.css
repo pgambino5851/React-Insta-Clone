@@ -1,4 +1,4 @@
-.post-container{
+/* .post-container{
     width: 650px;
     margin: 0 auto;
 }
@@ -35,7 +35,7 @@
     display: flex !important;
     width: 15% !important;
     justify-content: space-between !important;
-}
+} */
 
 .fa-heart{
     cursor: pointer;
