@@ -32,7 +32,7 @@ class CommentSection extends Component {
         event.preventDefault();
         const comment = {
             id: Date.now(),
-            username: "gambino",
+            username: localStorage.getItem('username'),
             text: this.state.newComment
         }
 
