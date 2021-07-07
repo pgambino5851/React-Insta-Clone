@@ -1,0 +1,42 @@
+/* .post-container{
+    width: 650px;
+    margin: 0 auto;
+}
+
+.card{
+    border: none !important;
+    text-align: start;
+    margin-bottom: 30px;
+    background: red;
+}
+
+.thumbnail{
+    margin-bottom: 15px;
+}
+
+.thumbnail img{
+    width: 7.5%;
+    border-radius: 100%;
+    margin-left: 10px;
+   
+}
+
+.thumbnail span{
+    margin-left: 10px;
+}
+
+.card-subtitle{
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+.font-container{
+    margin-top: 10px;
+    display: flex !important;
+    width: 15% !important;
+    justify-content: space-between !important;
+} */
+
+.fa-heart{
+    cursor: pointer;
+}
